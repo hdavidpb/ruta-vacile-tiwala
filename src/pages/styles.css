@@ -1,0 +1,10 @@
+.form-page-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.disabled-scroll {
+  overflow: hidden;
+}
