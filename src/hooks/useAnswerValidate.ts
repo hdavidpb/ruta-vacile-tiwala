@@ -1,11 +1,10 @@
 import { QuestionType } from "../redux/features/forms/interface";
 
-import { getYearDifferenceBetweenActualDate } from "../utils/yearDifference";
-
 const useAnswerValidate = () => {
   const isValidAnswer = (answer: string, type: QuestionType) => {
     if (type === QuestionType.date) {
-      return getYearDifferenceBetweenActualDate(answer) >= 18;
+      const actualYear = new Date(answer).getFullYear();
+      return actualYear <= 2004;
     }
 
     if (type === QuestionType.email) {
