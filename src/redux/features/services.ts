@@ -14,12 +14,10 @@ export const sendDataWebHook = createAsyncThunk(
         phoneNumber: +answers["phoneNumber"],
       };
 
-      // const data = await Axios.post(
-      //   "https://pan5zaqgfl.execute-api.us-east-2.amazonaws.com/dynamo/clientes_tiwala",
-      //   dataJson
-      // );
-      // console.log(data.data);
-      console.log(dataJson);
+      const data = await Axios.post(
+        "https://pan5zaqgfl.execute-api.us-east-2.amazonaws.com/dynamo/clientes_tiwala",
+        dataJson
+      );
     } catch (error) {
       console.error(error);
     }
